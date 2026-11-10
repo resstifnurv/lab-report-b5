@@ -1,0 +1,285 @@
+{
+ "name": "1105-光电效应数据处理-B5",
+ "paper": {
+  "size": "B5",
+  "widthMm": 176,
+  "heightMm": 250,
+  "marginMm": {
+   "top": 17,
+   "right": 20,
+   "bottom": 13,
+   "left": 20
+  }
+ },
+ "footerLeft": "B5（176 × 250 mm）　版心宽 136 mm　上下留页眉页脚位",
+ "pages": [
+  {
+   "header": [
+    "1105　光电效应　普朗克常数的测定",
+    "数据处理　一"
+   ],
+   "title": "一、普朗克常数的测定",
+   "blocks": [
+    {
+     "type": "note",
+     "style": "margin:0 0 2.5mm 0;",
+     "text": "依据爱因斯坦光电方程 <i>eU</i><sub>c</sub> = <i>h&nu;</i> &minus; <i>W</i><sub>0</sub>，即 <i>U</i><sub>c</sub> = (<i>h</i>/<i>e</i>)<i>&nu;</i> &minus; <i>W</i><sub>0</sub>/<i>e</i>，<i>U</i><sub>c</sub>&ndash;<i>&nu;</i> 图为直线，其斜率 <i>k</i> = &minus;<i>h</i>/<i>e</i>。"
+    },
+    {
+     "type": "table",
+     "id": "t1",
+     "minAspect": 3,
+     "maxAspect": 5,
+     "caption": "表 1　不同波长入射光的频率与截止电压",
+     "layout": "quantities",
+     "rowHeightMm": 12.5,
+     "colWidthsMm": [
+      26,
+      22,
+      22,
+      22,
+      22,
+      22
+     ],
+     "rows": [
+      [
+       "&lambda; / nm",
+       "365",
+       "405",
+       "436",
+       "546",
+       "577"
+      ],
+      [
+       "&nu; / (10<sup>14</sup> Hz)",
+       "8.214",
+       "7.408",
+       "6.879",
+       "5.490",
+       "5.196"
+      ],
+      [
+       "U<sub>c</sub> / V",
+       "&minus;1.804",
+       "&minus;1.466",
+       "&minus;1.208",
+       "&minus;0.642",
+       "&minus;0.500"
+      ]
+     ]
+    },
+    {
+     "type": "spacer",
+     "heightMm": 2.5
+    },
+    {
+     "type": "figure",
+     "id": "fig1",
+     "src": "fig1.png",
+     "widthMm": 136,
+     "aspect": "16:9",
+     "caption": "图 1　截止电压 U<sub>c</sub> 与入射光频率 &nu; 的关系"
+    },
+    {
+     "type": "result",
+     "id": "res1",
+     "lines": [
+      "最小二乘拟合：<b>U</b><sub>c</sub> = {eq}（<i>&nu;</i> 以 Hz 计），决定系数 <b>R<sup>2</sup> = {r2}</b>。",
+      "斜率 <i>k</i> = {k}。",
+      "<i>h</i> = <i>e</i>|<i>k</i>| = 1.602176634&times;10<sup>&minus;19</sup> C &times; 4.299&times;10<sup>&minus;15</sup> V&middot;s = <b>{h} J&middot;s</b>。",
+      "理论值 <i>h</i><sub>0</sub> = 6.626&times;10<sup>&minus;34</sup> J&middot;s，相对误差 <i>E</i> = |6.888 &minus; 6.626| / 6.626 &times; 100% = <b>{err}</b>。",
+      "由拟合标准误差 <i>u</i>(<i>k</i>) = {uk} V&middot;s，得 <i>u</i>(<i>h</i>) = <i>e</i>&middot;<i>u</i>(<i>k</i>) = {uh} J&middot;s；",
+      "即 <b>h = {hpm}</b>，相对不确定度 1.4%。",
+      "截距 <i>b</i> = {b} V，逸出功 <i>W</i><sub>0</sub> = <i>eb</i> &asymp; {w0} eV。"
+     ]
+    }
+   ]
+  },
+  {
+   "header": [
+    "1105　光电效应　普朗克常数的测定",
+    "数据处理　二"
+   ],
+   "title": "二、光电管伏安特性曲线",
+   "blocks": [
+    {
+     "type": "table",
+     "id": "t2",
+     "caption": "表 2　两种波长下光电管的光电流与外加电压",
+     "rowHeightMm": 4.0,
+     "dividerAfter": 3,
+     "colWidthsMm": [
+      22,
+      23,
+      23,
+      22,
+      23,
+      23
+     ],
+     "header": [
+      {
+       "t": "U<sub>AC</sub> / V",
+       "sub": "&minus;1.0 ~ 9.5"
+      },
+      {
+       "t": "I<sub>1</sub> / (10<sup>&minus;11</sup> A)",
+       "sub": "&lambda; = 435.8 nm"
+      },
+      {
+       "t": "I<sub>2</sub> / (10<sup>&minus;11</sup> A)",
+       "sub": "&lambda; = 546.1 nm"
+      },
+      {
+       "t": "U<sub>AC</sub> / V",
+       "sub": "10.0 ~ 50.0"
+      },
+      {
+       "t": "I<sub>1</sub> / (10<sup>&minus;11</sup> A)",
+       "sub": "&lambda; = 435.8 nm"
+      },
+      {
+       "t": "I<sub>2</sub> / (10<sup>&minus;11</sup> A)",
+       "sub": "&lambda; = 546.1 nm"
+      }
+     ],
+     "rowsFrom": "rows_t2"
+    },
+    {
+     "type": "spacer",
+     "heightMm": 3
+    },
+    {
+     "type": "figure",
+     "id": "fig2",
+     "src": "fig2.png",
+     "widthMm": 136,
+     "heightMm": 66,
+     "caption": "图 2　两种波长下光电流 I 与外加电压 U<sub>AC</sub> 的关系"
+    },
+    {
+     "type": "note",
+     "text": "由图 2 可见：&lambda; = 435.8 nm 时曲线整体高于 546.1 nm；两曲线在 <i>U</i><sub>AC</sub> 较大时趋于平缓。U<sub>AC</sub> = 50 V 处电流仍在缓慢上升（末端斜率约 {s435} 与 {s546} &times;10<sup>&minus;11</sup> A/V），对 U<sub>AC</sub> &ge; 20 V 的数据按 I = I<sub>s</sub> &minus; a/U 外推，得饱和光电流 <b>I<sub>s</sub>(435.8 nm) &asymp; {is1} A</b>、<b>I<sub>s</sub>(546.1 nm) &asymp; {is2} A</b>，两者之比约 {ratio}。"
+    }
+   ]
+  },
+  {
+   "header": [
+    "1105　光电效应　普朗克常数的测定",
+    "数据处理　三"
+   ],
+   "title": "三、饱和光电流与入射光强、照射距离的关系",
+   "blocks": [
+    {
+     "type": "table",
+     "id": "t31",
+     "minAspect": 2.5,
+     "caption": "表 3　不同光阑孔径下的饱和光电流",
+     "rowHeightMm": 7,
+     "colWidthsMm": [
+      34,
+      33,
+      33
+     ],
+     "header": [
+      "&phi; / mm",
+      {
+       "t": "I<sub>1</sub> / (10<sup>&minus;11</sup> A)",
+       "sub": "&lambda; = 435.8 nm"
+      },
+      {
+       "t": "I<sub>2</sub> / (10<sup>&minus;11</sup> A)",
+       "sub": "&lambda; = 546.1 nm"
+      }
+     ],
+     "rows": [
+      [
+       "2",
+       "90",
+       "43"
+      ],
+      [
+       "4",
+       "333",
+       "164"
+      ],
+      [
+       "8",
+       "1297",
+       "648"
+      ]
+     ]
+    },
+    {
+     "type": "note",
+     "style": "margin-top:1.5mm;margin-bottom:2mm;",
+     "text": "孔径由 2 mm 增至 8 mm（通光面积增大到 16 倍），I<sub>1</sub> 由 90 增至 1297（约 {r1} 倍）、I<sub>2</sub> 由 43 增至 648（约 {r2x} 倍），即饱和光电流与光强（&prop; &phi;<sup>2</sup>）近似成正比。"
+    },
+    {
+     "type": "table",
+     "id": "t32",
+     "minAspect": 2.5,
+     "caption": "表 4　不同照射距离下的饱和光电流",
+     "rowHeightMm": 6.2,
+     "colWidthsMm": [
+      40,
+      40,
+      40
+     ],
+     "header": [
+      "L / mm",
+      "L<sup>&minus;2</sup> / (10<sup>&minus;6</sup> mm<sup>&minus;2</sup>)",
+      "I / (10<sup>&minus;11</sup> A)"
+     ],
+     "rows": [
+      [
+       "400",
+       "6.25",
+       "164"
+      ],
+      [
+       "380",
+       "6.93",
+       "188"
+      ],
+      [
+       "360",
+       "7.72",
+       "217"
+      ],
+      [
+       "340",
+       "8.65",
+       "256"
+      ],
+      [
+       "320",
+       "9.77",
+       "295"
+      ],
+      [
+       "300",
+       "11.11",
+       "352"
+      ]
+     ]
+    },
+    {
+     "type": "spacer",
+     "heightMm": 2.5
+    },
+    {
+     "type": "figure",
+     "id": "fig3",
+     "src": "fig3.png",
+     "widthMm": 136,
+     "aspect": "16:9",
+     "caption": "图 3　饱和光电流 I 与照射距离平方倒数 L<sup>&minus;2</sup> 的关系"
+    },
+    {
+     "type": "note",
+     "text": "线性拟合：<b>I = {k3} L<sup>&minus;2</sup> &minus; {b3}</b>（L<sup>&minus;2</sup> 以 10<sup>&minus;6</sup> mm<sup>&minus;2</sup> 计，即 L 以 mm 计；I 以 10<sup>&minus;11</sup> A 计），<b>R<sup>2</sup> = {r23}</b>。I 与 L<sup>&minus;2</sup> 高度线性，说明饱和光电流与照射距离的平方成反比（I &prop; 1/L<sup>2</sup>）；各点 I&middot;L<sup>2</sup> 在 {il}&sim;{ih}&times;10<sup>7</sup> 之间（&plusmn;10% 以内），结论一致。"
+    }
+   ]
+  }
+ ]
+}

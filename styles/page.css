@@ -1,0 +1,123 @@
+/* lab-report-b5 · B5 实验数据页样式
+   由 build.py 用 string.Template 填充：$PW 页宽、$PH 页高、$MT/$MR/$MB/$ML 页边距 */
+@page {
+  size: ${PW}mm ${PH}mm;
+  margin: 0;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: "Times New Roman", "SimSun", serif;
+  font-size: 10.5pt;
+  color: #000;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.page {
+  position: relative;
+  width: ${PW}mm;
+  height: ${PH}mm;
+  padding: ${MT}mm ${MR}mm ${MB}mm ${ML}mm;
+  page-break-after: always;
+  overflow: hidden;
+}
+.page:last-of-type { page-break-after: auto; }
+
+/* 页眉 */
+.ph {
+  display: flex;
+  justify-content: space-between;
+  font-family: "SimHei", sans-serif;
+  font-size: 8.5pt;
+  color: #444;
+  border-bottom: 0.6pt solid #000;
+  padding-bottom: 1.2mm;
+  margin-bottom: 4mm;
+  letter-spacing: 0.3pt;
+}
+
+h2 {
+  font-family: "SimHei", sans-serif;
+  font-size: 12.5pt;
+  font-weight: normal;
+  margin: 0 0 2.5mm 0;
+  letter-spacing: 0.5pt;
+}
+
+/* 图表题注 */
+.cap {
+  font-family: "SimHei", sans-serif;
+  font-size: 9pt;
+  text-align: center;
+  margin: 0 0 1.6mm 0;
+}
+.cap.top { margin-top: 3mm; }
+.cap.below { margin: 1.6mm 0 0 0; }
+
+/* 三线表 */
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 9pt;
+  font-family: "Times New Roman", "SimSun", serif;
+}
+th, td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 0 1.2mm;
+}
+table.three {
+  border-top: 0.55mm solid #000;
+  border-bottom: 0.55mm solid #000;
+}
+table.three thead th {
+  border-bottom: 0.22mm solid #000;
+  font-weight: normal;
+  padding-top: 0.8mm;
+  padding-bottom: 0.8mm;
+  line-height: 1.15;
+}
+table.three td { line-height: 1.05; }
+tr.sep td { border-bottom: 0.22mm solid #000; }
+
+sub, sup { font-size: 65%; }
+.small { font-size: 7.5pt; color: #222; }
+
+/* 图像：宽度由行内 style 指定，保证与 calc.py 出图尺寸一致 */
+img { display: block; margin: 0 auto; }
+
+/* 结果框 */
+.res {
+  margin-top: 2.5mm;
+  border: 0.2mm solid #9aa3ad;
+  padding: 2.2mm 3mm 2.4mm 3mm;
+  font-size: 9.5pt;
+  line-height: 1.62;
+  background: #fafbfc;
+}
+.res .line { text-indent: 2em; font-style: normal; }
+.res i { font-style: italic; }
+
+/* 说明文字 */
+.note {
+  font-size: 8.5pt;
+  line-height: 1.55;
+  color: #111;
+  margin-top: 2mm;
+}
+
+/* 页脚 */
+.foot {
+  position: absolute;
+  bottom: 6mm;
+  left: ${ML}mm;
+  right: ${MR}mm;
+  font-size: 7.5pt;
+  color: #555;
+  display: flex;
+  justify-content: space-between;
+  border-top: 0.2mm solid #bbb;
+  padding-top: 1mm;
+}
+
+.sp { height: 1.2mm; }

@@ -1,0 +1,52 @@
+{
+ "name": "实验数据处理",
+ "paper": {
+  "size": "B5",
+  "widthMm": 176,
+  "heightMm": 250,
+  "marginMm": { "top": 17, "right": 20, "bottom": 13, "left": 20 }
+ },
+ "footerLeft": "B5（176 × 250 mm）　版心宽 136 mm",
+ "pages": [
+  {
+   "header": ["课程名　实验名", "数据处理　一"],
+   "title": "一、示例小节",
+   "blocks": [
+    {
+     "type": "note",
+     "text": "这里是说明文字，可以写公式、单位、测量条件。数字也可以引用 out.json：{note_value}。"
+    },
+    {
+     "type": "table",
+     "id": "t1",
+     "caption": "表 1　示例数据表",
+     "minAspect": 3,
+     "maxAspect": 5,
+     "rowHeightMm": 12,
+     "colWidthsMm": [32, 26, 26, 26, 26],
+     "header": ["x / 单位", "1", "2", "3", "4"],
+     "rows": [
+      ["y / 单位", "1.02", "2.05", "2.97", "4.01"],
+      ["z / 单位", "0.51", "1.03", "1.49", "2.00"]
+     ]
+    },
+    { "type": "spacer", "heightMm": 3 },
+    {
+     "type": "figure",
+     "id": "fig1",
+     "src": "fig1.png",
+     "widthMm": 136,
+     "aspect": "16:9",
+     "caption": "图 1　示例关系曲线"
+    },
+    {
+     "type": "result",
+     "lines": [
+      "线性拟合：<b>y = {intercept} + {slope} x</b>，决定系数 <b>R<sup>2</sup> = {r2}</b>。",
+      "这里写推导或误差计算，数值同样用 {slope} 这类占位符从 out.json 取。"
+     ]
+    }
+   ]
+  }
+ ]
+}
